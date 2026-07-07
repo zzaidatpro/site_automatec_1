@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EURL AUTOMATEC</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img class="img_header" src="logo_automatec.jpg" title="logo">
+        
+        <nav class="nav">
+            <a href="#acceuil">Accueil</a>
+            <a href="#qsn">Qui sommes-nous ?</a>
+            <a href="#services">Services</a>
+            <a href="#produits">Produits</a>
+            <a href="#projet">Projets</a>
+            <a href="#contact">Contact</a>
+            <button class="btn-devis">Demandez un devis</button>
+        </nav>
+
+        <button class="menu" id="openBtn">☰</button>
+
+        <nav class="nav_hide" id="sidebar">
+            <button class="close-btn" id="closeBtn">✕</button>
+            <a href="#acceuil">Accueil</a>
+            <a href="#qsn">Qui sommes-nous ?</a>
+            <a href="#services">Services</a>
+            <a href="#produits">Produits</a>
+            <a href="#projet">Projets</a>
+            <a href="#contact">Contact</a>
+            <button class="btn-devis">Demandez un devis</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="acceuil" class="z-section">
+            <div class="z-content">
+                <h1>Votre Sécurité, Notre Priorité</h1>
+                <p>Solutions globales en sécurité électronique, vidéosurveillance et automatisation pour professionnels et particuliers.</p>
+                <a href="#contact" class="btn-main">Découvrir nos solutions</a>
+            </div>
+        </section>
+
+        <section id="qsn" class="about-section">
+            <h2>Qui Sommes-Nous ?</h2>
+            <div class="about-content">
+                <p><strong>EURL AUTOMATEC</strong> est une entreprise spécialisée dans l'étude, l'installation et la maintenance de systèmes de sécurité électronique et d'automatisation. Forts de notre expertise, nous accompagnons les entreprises et les particuliers dans la protection de leurs biens et de leurs proches grâce à des technologies de pointe et un service sur-mesure.</p>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Installation sur-mesure</h3>
+                    <p>Pose et configuration de vos équipements par des techniciens qualifiés.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Audit & Conseil</h3>
+                    <p>Analyse de vos risques pour concevoir le système de sécurité idéal.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Maintenance & SAV</h3>
+                    <p>Contrats d'entretien et assistance rapide pour garantir la continuité de votre protection.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="produits" class="products-section">
+            <h2>Nos Produits</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>Vidéosurveillance</h3>
+                    <p>Caméras IP Haute Définition, vision nocturne et accès à distance sur smartphone.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Alarme Anti-intrusion</h3>
+                    <p>Systèmes d'alarme filaires ou sans fil avec détection de mouvement avancée.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Contrôle d'Accès</h3>
+                    <p>Lecteurs de badges, biométrie, interphonie et gestion des entrées/sorties.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Securité Incendie</h3>
+                    <p>Détecteurs de fumée, de chaleur et systèmes d'extinction automatiques.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Automation & Domotique</h3>
+                    <p>Automatisation de portails, barrières levantes et gestion intelligente des bâtiments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projet" class="projects-section">
+            <h2>Nos Réalisations</h2>
+            <p>Découvrez quelques-uns des projets menés à bien pour sécuriser des industries, des commerces et des résidences privées.</p>
+            <div class="projects-gallery">
+                <div class="product-card">Sécurisation de sites industriels : MS Pharma</div>
+                <div class="product-card">Contrôle d'accès pour un immeuble de bureaux : Sonatrach</div>
+                <div class="product-card">Vidéosurveillance résidentielle Alger - Oran - Setif</div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contactez-nous</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><strong>Adresse :</strong> Delly Ibrahim - Alger, Algérie</p>
+                    <p><strong>Téléphone :</strong>+213 561 274 927</p>
+                    <p><strong>Email :</strong> automatec.dz@gmail.com</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Votre Nom" required>
+                    <input type="email" placeholder="Votre Email" required>
+                    <input type="text" placeholder="Sujet">
+                    <textarea placeholder="Votre Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-submit">Envoyer le message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 EURL AUTOMATEC. Tous droits réservés.</p>
+            <p>Solutions de Sécurité Électronique & Automation.</p>
+        </div>
+    </footer>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const menuLinks = sidebar.querySelectorAll('a, button');
+
+        openBtn.addEventListener('click', () => {
+            sidebar.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
