@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,14 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-
-    
-
     <header>
-        <img class="img_header" src="logo_automatec.jpg" title="logo">
-        
+        <img class="img_header" src="logo_automatec.jpg" title="logo" alt="Logo Automatec">
+
         <nav class="nav">
-            <a href="#acceuil">Accueil</a>
+            <a href="#accueil">Accueil</a>
             <a href="#qsn">Qui sommes-nous ?</a>
             <a href="#services">Services</a>
             <a href="#produits">Produits</a>
@@ -29,7 +28,7 @@
 
         <nav class="nav_hide" id="sidebar">
             <button class="close-btn" id="closeBtn">✕</button>
-            <a href="#acceuil">Accueil</a>
+            <a href="#accueil">Accueil</a>
             <a href="#qsn">Qui sommes-nous ?</a>
             <a href="#services">Services</a>
             <a href="#produits">Produits</a>
@@ -40,10 +39,11 @@
     </header>
 
     <main>
-        <section id="acceuil" class="z-section">
+        <section id="accueil" class="z-section">
             <div class="z-content">
                 <h1>Votre Sécurité, Notre Priorité</h1>
-                <p>Solutions globales en sécurité électronique, vidéosurveillance et automatisation pour professionnels et particuliers.</p>
+                <p>Solutions globales en sécurité électronique, vidéosurveillance et automatisation pour professionnels
+                    et particuliers.</p>
                 <a href="#contact" class="btn-main">Découvrir nos solutions</a>
             </div>
         </section>
@@ -51,7 +51,10 @@
         <section id="qsn" class="about-section">
             <h2>Qui Sommes-Nous ?</h2>
             <div class="about-content">
-                <p><strong>EURL AUTOMATEC</strong> est une entreprise spécialisée dans l'étude, l'installation et la maintenance de systèmes de sécurité électronique et d'automatisation. Forts de notre expertise, nous accompagnons les entreprises et les particuliers dans la protection de leurs biens et de leurs proches grâce à des technologies de pointe et un service sur-mesure.</p>
+                <p><strong>EURL AUTOMATEC</strong> est une entreprise spécialisée dans l'étude, l'installation et la
+                    maintenance de systèmes de sécurité électronique et d'automatisation. Forts de notre expertise, nous
+                    accompagnons les entreprises et les particuliers dans la protection de leurs biens et de leurs
+                    proches grâce à des technologies de pointe et un service sur-mesure.</p>
             </div>
         </section>
 
@@ -101,7 +104,8 @@
 
         <section id="projet" class="projects-section">
             <h2>Nos Réalisations</h2>
-            <p>Découvrez quelques-uns des projets menés à bien pour sécuriser des industries, des commerces et des résidences privées.</p>
+            <p>Découvrez quelques-uns des projets menés à bien pour sécuriser des industries, des commerces et des
+                résidences privées.</p>
             <div class="projects-gallery">
                 <div class="product-card">Sécurisation de sites industriels : MS Pharma</div>
                 <div class="product-card">Contrôle d'accès pour un immeuble de bureaux : Sonatrach</div>
@@ -113,8 +117,8 @@
             <h2>Contactez-nous</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <p><strong>Adresse :</strong> Delly Ibrahim - Alger, Algérie</p>
-                    <p><strong>Téléphone :</strong>+213 561 274 927</p>
+                    <p><strong>Adresse :</strong> Dely Ibrahim - Alger, Algérie</p>
+                    <p><strong>Téléphone :</strong> +213 561 274 927</p>
                     <p><strong>Email :</strong> automatec.dz@gmail.com</p>
                 </div>
                 <form class="contact-form">
@@ -126,6 +130,85 @@
                 </form>
             </div>
         </section>
+
+        <section id="estimateur" class="devis-section">
+            <h2>Estimez le coût de votre sécurité</h2>
+
+            <div class="devis-form-group">
+                <label for="service-type">Prestation principale :</label>
+                <select id="service-type" class="devis-select">
+                    <option value="0" data-prix="0">-- Choisissez un service --</option>
+                    <option value="videosurveillance" data-prix="">Vidéosurveillance HD (Forfait installation de base)
+                    </option>
+                    <option value="alarme" data-prix="">Alarme Anti-intrusion (Centrale + paramétrage)</option>
+                    <option value="controle-acces" data-prix="">Contrôle d'Accès biométrique/badge</option>
+                    <option value="incendie" data-prix="">Sécurité Incendie réglementaire</option>
+                </select>
+            </div>
+
+            <!-- AJOUT REQUIS POUR LE SCRIPT JS : Sélecteur de quantité globale d'équipements -->
+            <div class="devis-form-group">
+                <label>Quantité globale / Multiplicateur d'options : <span id="duree-val">1</span></label>
+                <input type="range" id="service-duree" min="1" max="20" value="1" style="width:100%;">
+            </div>
+
+            <div class="devis-form-group">
+                <label>Sélectionnez vos équipements additionnels :</label>
+                <div id="options-container">
+                    <p style="font-size: 13px; color: #94a3b8; font-style: italic;">Veuillez d'abord choisir un service
+                        principal.</p>
+                </div>
+            </div>
+
+            <div class="devis-total-box">
+                <h3>Estimation de votre budget :</h3>
+                <p class="devis-prix-final"><span id="total-estimation">0</span> DA</p>
+                <span class="devis-precision">*Estimation de base en Dinars Algériens (DA) sous réserve d'audit
+                    technique</span>
+            </div>
+
+
+
+
+            
+            <!-- Bouton -->
+            <button class="btn-devis" id="openPopup">Voir votre estimation</button>
+
+            <!-- Popup -->
+            <div id="popup" class="popup hidden">
+                <div class="popup-content">
+                    <span id="closePopup" class="popup-close">&times;</span>
+                    <h3>Votre estimation détaillée</h3>
+                    <table class="devis-table" border="1" cellpadding="6" style="width:100%; border-collapse:collapse;">
+                        <thead>
+                            <tr>
+                                <th>Produit / Option</th>
+                                <th>Quantité</th>
+                                <th>Prix unitaire (DA)</th>
+                                <th>Sous-total (DA)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="details-estimation-popup"></tbody>
+                    </table>
+                    <h3>Total : <span id="total-estimation-popup">0</span> DA</h3>
+                </div>
+            </div>
+
+            <table class="devis-table">
+                <thead>
+                    <tr>
+                        <th>Produit / Option</th>
+                        <th>Quantité</th>
+                        <th>Prix unitaire (DA)</th>
+                        <th>Sous-total (DA)</th>
+                    </tr>
+                </thead>
+                <tbody id="details-estimation-popup"></tbody>
+            </table>
+
+
+
+        </section>
     </main>
 
     <footer>
@@ -135,25 +218,7 @@
         </div>
     </footer>
 
-    <script>
-        const sidebar = document.getElementById('sidebar');
-        const openBtn = document.getElementById('openBtn');
-        const closeBtn = document.getElementById('closeBtn');
-        const menuLinks = sidebar.querySelectorAll('a, button');
-
-        openBtn.addEventListener('click', () => {
-            sidebar.classList.add('open');
-        });
-
-        closeBtn.addEventListener('click', () => {
-            sidebar.classList.remove('open');
-        });
-
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sidebar.classList.remove('open');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
